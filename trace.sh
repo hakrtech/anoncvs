@@ -18,16 +18,17 @@ do
     nohup traceroute -n -w 2 -q 2 -m 25 $h > $h.traceroute &
   fi
 done
+sleep 3
 RUNNING=`ps ax | grep traceroute | wc -l` 
-echo -n waiting
+# echo -n waiting
 while :
 do
   if [ $RUNNING -eq 0 ]; then
     echo ""
     exit 0
   fi
-  sleep 1
-  echo -n "."
+  sleep 3
+  printf "%d " "$RUNNING"
   RUNNING=`ps ax | grep traceroute | wc -l` 
 done
 
