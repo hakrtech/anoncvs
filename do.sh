@@ -34,7 +34,7 @@ echo \# usa in path or destination
 grep -v ok do.report.txt 
 for h in `cat ANONCVS`
 do 
-  # rm -f ${h}.*
+  rm -f ${h}.*
 done
 # rm -f ANONCVS
 exit 0
