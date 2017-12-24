@@ -3,7 +3,7 @@
 for h in `cat ANONCVS`
 do
   # echo $h
-  nohup geo.sh $h > /dev/null &
+  geo.sh $h > $h.geopath &
 done
 
 for h in `cat ANONCVS`

@@ -15,5 +15,5 @@ for h in `cat $target.route`
 do 
   printf "%16s " $h
   geoiplookup $h | sed -e 's/GeoIP Country Edition://g' 
-done  > ${target}.geopath
+done # > ${target}.geopath
 exit 0  
